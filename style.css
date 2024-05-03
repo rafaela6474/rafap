@@ -1,136 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family-Chakra+Petch:w ght@400:700&display=swap'); 
-
-:root {
-      --cor-de-fundo: #1E1E1E;
-      --verde: #6FFF57;
-      --branco: #FFFFFF;
-      --botao-ativo: #3A375E;
-      --texto-fundo: rgba(21, 0, 255, 0.3);
- }
-  
-
-body {
-   background-color: var(--cor-de-fundo);
-   color: var(--branco);
-   font-family: 'Chakra Petch', sans-serif;
+:root{
+  --branco: white;
+  --cor-de-fundo: #00162E;
+  --fundo-senha: #00244D;
+  --fundo-texto: #001E40;
+  --borda: #0075FF;
 }
-
-
-.conteudo-principal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
+:root{
+  --branco: white;
+  --cor-de-fundo: #00162E;
+  --fundo-senha: #00244D;
+  --fundo-texto: #001E40;
+  --borda: #0075FF;
+  --roboto: 'Roboto', sans-serif;
+  --roboto-mono: 'Roboto Mono', monospace;
 }
-
-.titulo-principal {
-   text-align: left;
-   width: 100%;
-    font-size: 32px;
+body{
+  color: var(--branco);
+  background-color: var(--cor-de-fundo);
+  font-family: var(--roboto);
 }
-
-.titulo-principal span {
-   color: var(--verde);
+.titulo-principal{
+  font-family: var(--roboto-mono);
+  font-size: 32px;
 }
-
-
-.botao {
-    font-family: 'Chakra Petch', sans-serif;
-    background-color: var(--botao-inativo);
-    color: var(--branco);
-    display: flex;
-    justify-content: center;
-    padding: 1em;
-    font-size: 18px;
-    align-items: center;
-    width: 100%;
-    border-bottom: 4px solid var(--botao-ativo);
-    border-left: 2px solid var(--botao-ativo);
-    border-right: 2px solid var(--botao-ativo);
-    border-top: none;
+.titulo-secundario{
+  font-size: 24px;
 }
-
-.botao:first-child {
-  border-radius: 40px 40px 0 0;
-}
-
-.botoes {
-display: block;
-}
-
-.botao.ativo{
-  background-color: var(--botao-ativo);
-  border-bottom: 4px solid var(--verde);
-}
-
-.abas-textos{
-   background-color: var(--texto-fundo);
-   padding: 40px;
-   border-radius: 0 0 40px 40px;
-}
-.aba-conteudo.ativo{
- display:block;
-}
-
-.aba-conteudo{
- display: none;
-}
-
-.aba-conteudo-titulo-principal{
-  font-size: 28px;
+.conteudo-titulo{
   text-align: center;
+  margin-top: 80px;
 }
-.aba-conteudo-titulo-secundario{
-  text-align: center;
-  color: var(--verde);
-  text-transform: uppercase;
+*{
+  font-weight: 400
 }
-
-.contador{
-  display:flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.conteudo-senha{
+  margin-top: 80px; 
+  background: var(--fundo-senha);
+  padding: 24px;
+  border-bottom: 6px solid var(--borda);
 }
-.contador-digito{
-   padding: 0 16px;
-   text-align: center;
-   min-width: 100px;
+#campo-senha{
+  background-color: var(--fundo-senha);
+  border: none;
+  color: var(--branco);  
+  font-family: var(--roboto-mono);
+  font-size: 40px;
+  width: 70%;
 }
-
-.contador-digito-numero{
-font-size: 80px;
-margin: 0;
-
+#campo-senha:focus{
+  outline: none;
 }
-
-.contador-digito-texto{
-  color: var(--verde);
-  font-size: 20px;
-  margin: 0;
-
+.conteudo{
+  max-width: 1200px;
+  margin: 0 auto;
 }
-
-@media screen and (min-width: 768px) {
-.botoes {
-   display: flex;
- }
-
-.botao:first-child {
-   border-radius: 40px 0 0 0;
- }
-
-.botao:last-child {
-  border-radius: 0 40px 0 0;
-   }
-  }
-  .parametro{
-    background-color: var(--fundo-texto);
-    border: 2px solid var(--borda);
-    margin-top: 32px;
-    padding: 24px;
+.parametro{
+  background-color: var(--fundo-texto);
+  border: 2px solid var(--borda);
+  margin-top: 32px;
+  padding: 24px;
 }
 .parametro-titulo{
   font-family: var(--roboto-mono);
@@ -144,14 +72,6 @@ margin: 0;
   flex-direction: column;
   justify-content: center;
 }
-#campo-senha{
-  background-color: var(--fundo-senha);
-  border: none;
-  color: var(--branco);
-  font-family: var(--roboto-mono);
-  font-size: 40px;
-  width: 70%;
-}
 @media screen and (min-width: 768px) {
   .parametro-coluna__senha{
       flex-direction: row;
@@ -161,24 +81,27 @@ margin: 0;
   width: 50%;
   margin: 0 auto;
 }
-
-
-.parametro-senha__botao{
-    background-color: var(--fundo-texto);
-    color: var(--branco);
-    border: 2px solid var(--borda);
-    padding: 24px;
-    font-size: 24px;
-    cursor: pointer;
-   
+.parametro-senha-botoes{
+  display: flex;
+  justify-content: center;
 }
-
+.parametro-senha__botao{
+  background-color: var(--fundo-texto);
+  color: var(--branco);
+  border: 2px solid var(--borda);
+  padding: 24px;
+  font-size: 24px;
+  cursor: pointer;
+}
 .parametro-senha__texto{
-    padding: 24px;
-    border-top: 2px solid var(--borda);
-    border-bottom: 2px solid var(--borda);
-    margin: 0;
-    font-size: 24px;
+  padding: 24px;
+  border-top: 2px solid var(--borda);
+  border-bottom: 2px solid var(--borda);
+  margin: 0;
+  font-size: 24px;
+}
+label{
+  font-size: 20px;
 }
 .checkbox{
   width: 20px;
@@ -199,6 +122,10 @@ margin: 0;
   width: 25%;
   background-color: #E71B32; 
 }
+.parametro-senha-textos{
+  display: flex;
+  justify-content: space-between;
+}
 .media{
   background-color: #FAF408;
   width: 50%;
@@ -207,5 +134,8 @@ margin: 0;
   background-color: #00FF85;
   width: 100%;
 }
+
+
+
 
 
